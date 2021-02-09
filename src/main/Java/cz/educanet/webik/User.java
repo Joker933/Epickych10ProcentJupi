@@ -14,5 +14,12 @@ public class User {
     public int setId(int id) { return this.id = id; }
     public int setCode(int code) { return this.code = code; }
 
+    public void setJmeno(String jmeno) {
+        this.jmeno = jmeno;
+    }
+
+    public int getId() {
+        return id;
+    }
 }
 

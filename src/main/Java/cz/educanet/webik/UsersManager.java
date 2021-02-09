@@ -11,14 +11,9 @@ public class UsersManager {
 
     public ArrayList<User> dostanJmenos(){ return userList; }
 
-    public boolean create(User userList) {
-        if(userList.getCode() < 0 || userList.getCode() > 100)
-            return false;
-        int generujID = (int) (Math.random()*(100 +1));
-        if (kontrolac(generujID)){
-            userList.setId(generujID);
-        }
-        return true;
+    public boolean create(User user) {
+        user.setId(userList.size());
+        return userList.add(user);
     }
 
     public User dostanJmenos (int id){
@@ -27,6 +22,7 @@ public class UsersManager {
                 .findAny()
                 .orElse(null);
     }
+
     public boolean odstranJmenos(int id){
         return  userList.remove(dostanJmenos(id));
     }
