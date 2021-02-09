@@ -12,18 +12,18 @@ public class UsersManager {
     public ArrayList<User> dostanJmenos(){ return userList; }
 
     public boolean create(User userList) {
-        if(userList.dostanCode() < 0 || userList.dostanCode() > 100)
+        if(userList.getCode() < 0 || userList.getCode() > 100)
             return false;
         int generujID = (int) (Math.random()*(100 +1));
         if (kontrolac(generujID)){
-            userList.nastavId(generujID);
+            userList.setId(generujID);
         }
         return true;
     }
 
     public User dostanJmenos (int id){
         return userList.stream()
-                .filter(userListStream -> id == userListStream.dostanID())
+                .filter(userListStream -> id == userListStream.getID())
                 .findAny()
                 .orElse(null);
     }

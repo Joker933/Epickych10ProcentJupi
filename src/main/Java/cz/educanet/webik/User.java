@@ -4,15 +4,15 @@ public class User {
     public String jmeno, heslo;
     public int id, code;
 
-    public String dostanJmeno() { return jmeno; }
-    public String dostanHeslo() { return heslo; }
-    public int dostanID() { return id; }
-    public int dostanCode() { return code; }
+    public String getJmeno() { return jmeno; }
+    public String getHeslo() { return heslo; }
+    public int getID() { return id; }
+    public int getCode() { return code; }
 
-    public String nastavUser(String jmeno) { return this.jmeno = jmeno; }
-    public String nastavHeslo(String heslo){ return this.heslo = heslo;}
-    public int nastavId(int id) { return this.id = id; }
-    public int nastavCode(int code) { return this.code = code; }
+    public String setUser(String jmeno) { return this.jmeno = jmeno; }
+    public String setHeslo(String heslo){ return this.heslo = heslo;}
+    public int setId(int id) { return this.id = id; }
+    public int setCode(int code) { return this.code = code; }
 
 }
 
