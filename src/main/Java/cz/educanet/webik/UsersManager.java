@@ -26,12 +26,5 @@ public class UsersManager {
     public boolean odstranJmenos(int id){
         return  userList.remove(dostanJmenos(id));
     }
-    public boolean kontrolac(int id) {
-        for (int i = 0; i < 100; i++){
-            if (id != userList.get(id).id) {
-                return false;
-            }
-        }
-        return true;
-    }
+
 }
